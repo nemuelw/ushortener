@@ -24,4 +24,4 @@ Start the server
 go run server.go
 ```
 
-You can now interact use the service via its endpoints
+You can now use the service via its endpoints
