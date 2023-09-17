@@ -16,6 +16,12 @@ git clone https://github.com/nemzyxt/ushortener.git
 go get
 ```
 
+## Testing
+
+```
+go test
+```
+
 ## Usage
 
 Start the server
