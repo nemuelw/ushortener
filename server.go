@@ -32,7 +32,7 @@ func shortenURL(c *gin.Context) {
 	id, _ := shortid.Generate()
 	host := c.Request.Host
 
-	shortURL := fmt.Sprintf("https://%s/%s", host, id)
+	shortURL := fmt.Sprintf("http://%s/%s", host, id)
 	urlMap[id] = longURL
 
 	c.JSON(http.StatusOK, gin.H{"shortURL": shortURL})
