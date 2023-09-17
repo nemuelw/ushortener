@@ -20,7 +20,15 @@ func main() {
 }
 
 func shortenURL(c *gin.Context) {
-	longURL := c.PostForm("longURL")
+	var requestBody struct {
+		LongURL string `json:"longURL"`
+	}
+
+	if err := c.ShouldBindJSON(&requestBody); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+	longURL := requestBody.LongURL
 	id, _ := shortid.Generate()
 	host := c.Request.Host
 
