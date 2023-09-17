@@ -1,6 +1,8 @@
 package main
 
 import (
+	"ushortener/controllers"
+
 	"github.com/gin-gonic/gin"
 )
 
